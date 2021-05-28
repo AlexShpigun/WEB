@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
+var animeControler = require('../controler/animeControler')
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-    res.send('you aro watching anime lists');
-});
+router.get('/find', animeControler.findInYourAnimes);
+router.get('/', animeControler.getYourAnimes);
+
 
 module.exports = router;
