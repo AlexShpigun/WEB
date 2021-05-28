@@ -1,9 +1,14 @@
 
 const bcrypt = require('bcrypt')
 const db = require('../db')
+const {validationResult} = require('express-validator')
 
 class UsersControler{
     async register(req, res){
+        const errors = validationResult(req)
+        if(!errors.isEmpty()){
+            return res.status(400).json({massage: 'error during validation'})
+        }
         const {email, password, name} = req.body
         if(!email || !password || ! name){
             return res.status(403).send("error: not enough data");
@@ -36,12 +41,34 @@ class UsersControler{
     }
 
     async login(req, res){
+        const {email, password} = req.body
+        if(!email || !password){
+            return res.status(403).send("error: not enough data");
+        }
+        db.query("SELECT c.* FROM client c WHERE c.email = $1",[email],function(err, rows){
+            console.log(rows)
+            console.log(rows.rows)
+            if(err) {
+                console.log(err);
+                return;
+            }
+            if(rows.rowCount == 0){
+                return res.status(400).send("error: no email");
+            }
+
+            let comparePassword = bcrypt.compareSync(password, rows.rows[0].password)
+            if(!comparePassword){
+                return res.status(400).send("error: incorrect password ");
+            }
+            res.json(rows.rows[0])
+
+
+
+
+        })
 
     }
-    async check(req, res){
-        res.send('-')
 
-    }
 
 }
 module.exports = new UsersControler()
