@@ -1,0 +1,83 @@
+body{
+    background-color:  #192233;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+}
+.regmenu{
+background-color: #212C42;
+position: absolute;
+width: 480px;
+height: 640px;
+left: calc(50% - 480px/2);
+top: calc(50% - 640px/2 - 20px);
+border-radius: 4px;
+align-items: center;
+}
+.reginput{
+    padding-left: 70px;
+    padding-top: 30px;
+}
+.z1{
+    padding-top: 50px;
+    padding-left: 70px;
+    color: #8B97AE;
+}
+.z2{
+    padding-top: 30px;
+    padding-left: 260px;
+    color: #8B97AE;
+}
+.name{
+    padding-top: 20px;
+    padding-left: 70px;
+    font-size: 24px;
+    color: white;
+}
+.rules
+{
+    margin-left: 70px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+.terms{
+    color: #8B97AE;
+    margin-left: 5px;
+}
+button{
+    margin-top: 45px;
+    margin-left: 70px;
+    width: 350px;
+    font-size: 24px;
+    text-align: center;
+    background-color: #DB6AB5;
+    border-radius: 4px;
+    color: white;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    border-width: 0px;
+}
+input{
+    width: 350px;
+    height: 30px;
+}
+.check{
+    width: 10px;
+    font-size: 14px;
+}
+.z3{
+    margin-top: 7px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+}
+a{
+    color: #8B97AE;
+    text-decoration: 0;
+}
+input[type="search"] { 
+    color: #212C42;
+   }

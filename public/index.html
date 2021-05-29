@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="regstyle.scss">
+        <title>TvoiSenpai</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <div class="regmenu">
+        <div class="z1">
+            &#8592 Go 
+            <router-link to="/reg">back</router-link>
+            <router-view></router-view>
+        </div>
+        <div class="z2"><a href="">Have an account? Sign in</a></div>
+        <div class="name">Sign up TvoiSenpai</div>
+                <div class="reginput">
+                    <input type="text" placeholder="First Name">
+                </div>
+                <div class="reginput">
+                    <input type="text" placeholder="Last Name">
+                </div>
+                <div class="reginput">
+                    <input type="text" placeholder="Email Adress">
+                </div>
+                <div class="reginput">
+                    <input type="text" placeholder="Password">
+                </div>
+                <div class="rules">
+                <div>
+                    <input type="checkbox" class="check">
+                </div>
+                    <div class="z3">
+                        I have read <div class="terms"><a href="">Terms of Conidition</a></div>
+                    </div>
+                </div>
+        <button id="myBTN">SIGN UP NOW</button>
+        </div>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+<script src="script.js"></script>
+    </body>
+</html>
